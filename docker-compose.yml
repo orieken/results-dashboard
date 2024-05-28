@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build: ./dashboard
+    ports:
+      - "8080:80"
+    depends_on:
+      - service
+
+  service:
+    build: ./service
+    ports:
+      - "8081:5000"
+    volumes:
+      - sqlite-db:/app/teams.db
+    environment:
+      FLASK_APP: app.py
+      FLASK_ENV: development
+
+  sqlite-db:
+    image: nouchka/sqlite3
+    platform: linux/amd64
+    volumes:
+      - sqlite-db:/root/db
+    environment:
+      SQLITE_DATABASE: /root/db/teams.db
+
+volumes:
+  sqlite-db:
+
