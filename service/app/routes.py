@@ -10,7 +10,6 @@ def configure_routes(app):
     def hello():
         return 'Hello, World!'
 
-
     @app.route('/teams', methods=['POST'])
     def create_team():
         logging.debug("Received request to create team.")
@@ -22,47 +21,35 @@ def configure_routes(app):
                 return jsonify({"error": "Incomplete results data"}), 400
 
             team = Team.query.filter_by(name=data['name']).first()
-            if team:
-                return jsonify({"error": "Team already exists"}), 400
-
-            new_team = Team(
-                name=data['name'],
+            new_result = TeamResult(
                 passing=data['results']['passing'],
                 failing=data['results']['failing'],
                 pending=data['results']['pending']
             )
-            db.session.add(new_team)
+            if team:
+                team.passing = data['results']['passing']
+                team.failing = data['results']['failing']
+                team.pending = data['results']['pending']
+                team.results.append(new_result)
+                message = f"Added new results for {team.name}"
+                status_code = 201
+            else:
+                new_team = Team(
+                    name=data['name'],
+                    passing=data['results']['passing'],
+                    failing=data['results']['failing'],
+                    pending=data['results']['pending'],
+                    results=[new_result]
+                )
+                db.session.add(new_team)
+                message = "Team created successfully"
+                status_code = 201
             db.session.commit()
-            return jsonify({"message": "Team created successfully"}), 201
+            return jsonify({"message": message}), status_code
+
         except Exception as e:
             db.session.rollback()
             return jsonify({"error": str(e)}), 500
-
-    # @app.route('/teams', methods=['POST'])
-    # def create_team():
-    #     data = request.get_json()
-    #
-    #     # Validate that all required fields are present
-    #     required_top_level_fields = ['name', 'results']
-    #     required_result_fields = ['passing', 'failing', 'pending']
-    #
-    #     # Check for top-level fields
-    #     if not all(field in data for field in required_top_level_fields):
-    #         return jsonify({"error": "Missing required data"}), 400
-    #
-    #     # Check for nested results fields
-    #     if not all(field in data['results'] for field in required_result_fields):
-    #         return jsonify({"error": "Incomplete results data"}), 400
-    #
-    #     new_team = Team(
-    #         name=data['name'],
-    #         passing=data['results']['passing'],
-    #         failing=data['results']['failing'],
-    #         pending=data['results']['pending']
-    #     )
-    #     db.session.add(new_team)
-    #     db.session.commit()
-    #     return jsonify({"message": "Team created successfully"}), 201
 
     @app.route('/teams/summary', methods=['GET'])
     def get_team_summaries():
