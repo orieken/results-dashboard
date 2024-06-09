@@ -1,0 +1,13 @@
+{
+  "created": 1714631685.4343581,
+  "duration": 0.022524118423461914,
+  "exitcode": 1,
+  "root": "/Users/oscarrieken/Projects/Personal/experimental/python-pytest",
+  "environment": {},
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "total": 9,
+    "collected": 9
+  }
+}

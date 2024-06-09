@@ -1,0 +1,378 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Setup Works # features/sample.feature:1",
+    "tags": [],
+    "location": "setup.feature:1",
+    "status": "failed",
+    "description": [
+      "In order to load a website",
+      "as a user",
+      "I want cucumber to work with playwright"
+    ],
+    "elements": [
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup.feature:7",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implemented",
+            "location": "setup.feature:8",
+            "match": {
+              "location": "steps/setup.steps.py:4",
+              "arguments": []
+            },
+            "result": {
+              "status": "failed",
+              "duration": 0.0003151893615722656,
+              "error_message": [
+                "Traceback (most recent call last):",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/model.py\", line 1329, in run",
+                "    match.run(runner.context)",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run",
+                "    self.func(context, *args, **kwargs)",
+                "  File \"steps/setup.steps.py\", line 6, in step_impl",
+                "    raise NotImplementedError(u'STEP: Given I am not implemented')",
+                "NotImplementedError: STEP: Given I am not implemented"
+              ]
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step code",
+            "location": "setup.feature:9"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup.feature:11",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implementeds",
+            "location": "setup.feature:12",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step codes",
+            "location": "setup.feature:13"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup.feature:15",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implementedaa",
+            "location": "setup.feature:16",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step codeaa",
+            "location": "setup.feature:17"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup.feature:19",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implementeddd",
+            "location": "setup.feature:20",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step codedd",
+            "location": "setup.feature:21"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup.feature:23",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implementedssa",
+            "location": "setup.feature:24",
+            "result": {
+              "status": "undefined",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step codessa",
+            "location": "setup.feature:25"
+          }
+        ],
+        "status": "failed"
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Setup Works # features/sample.feature:1",
+    "tags": [],
+    "location": "setup_other.feature:1",
+    "status": "failed",
+    "description": [
+      "In order to load a website",
+      "as a user",
+      "I want cucumber to work with playwright"
+    ],
+    "elements": [
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup_other.feature:7",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I pass",
+            "location": "setup_other.feature:8",
+            "match": {
+              "location": "steps/setup.steps.py:9",
+              "arguments": []
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.09808349609375e-05
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I pass",
+            "location": "setup_other.feature:9",
+            "match": {
+              "location": "steps/setup.steps.py:13",
+              "arguments": []
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2.09808349609375e-05
+            }
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup_other.feature:11",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implemented",
+            "location": "setup_other.feature:12",
+            "match": {
+              "location": "steps/setup.steps.py:4",
+              "arguments": []
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4.315376281738281e-05,
+              "error_message": [
+                "Traceback (most recent call last):",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/model.py\", line 1329, in run",
+                "    match.run(runner.context)",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run",
+                "    self.func(context, *args, **kwargs)",
+                "  File \"steps/setup.steps.py\", line 6, in step_impl",
+                "    raise NotImplementedError(u'STEP: Given I am not implemented')",
+                "NotImplementedError: STEP: Given I am not implemented"
+              ]
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step code",
+            "location": "setup_other.feature:13"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup_other.feature:15",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implemented",
+            "location": "setup_other.feature:16",
+            "match": {
+              "location": "steps/setup.steps.py:4",
+              "arguments": []
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3.981590270996094e-05,
+              "error_message": [
+                "Traceback (most recent call last):",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/model.py\", line 1329, in run",
+                "    match.run(runner.context)",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run",
+                "    self.func(context, *args, **kwargs)",
+                "  File \"steps/setup.steps.py\", line 6, in step_impl",
+                "    raise NotImplementedError(u'STEP: Given I am not implemented')",
+                "NotImplementedError: STEP: Given I am not implemented"
+              ]
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step code",
+            "location": "setup_other.feature:17"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup_other.feature:19",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implemented",
+            "location": "setup_other.feature:20",
+            "match": {
+              "location": "steps/setup.steps.py:4",
+              "arguments": []
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3.933906555175781e-05,
+              "error_message": [
+                "Traceback (most recent call last):",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/model.py\", line 1329, in run",
+                "    match.run(runner.context)",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run",
+                "    self.func(context, *args, **kwargs)",
+                "  File \"steps/setup.steps.py\", line 6, in step_impl",
+                "    raise NotImplementedError(u'STEP: Given I am not implemented')",
+                "NotImplementedError: STEP: Given I am not implemented"
+              ]
+            }
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step code",
+            "location": "setup_other.feature:21"
+          }
+        ],
+        "status": "failed"
+      },
+      {
+        "type": "scenario",
+        "keyword": "Scenario",
+        "name": "Undefined steps # features/sample.feature:8",
+        "tags": [],
+        "location": "setup_other.feature:23",
+        "steps": [
+          {
+            "keyword": "Given",
+            "step_type": "given",
+            "name": "I am not implemented",
+            "location": "setup_other.feature:24",
+            "match": {
+              "location": "steps/setup.steps.py:4",
+              "arguments": []
+            },
+            "result": {
+              "status": "failed",
+              "duration": 4.100799560546875e-05,
+              "error_message": [
+                "Traceback (most recent call last):",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/model.py\", line 1329, in run",
+                "    match.run(runner.context)",
+                "  File \"/Users/oscarrieken/.pyenv/versions/3.10.13/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run",
+                "    self.func(context, *args, **kwargs)",
+                "  File \"steps/setup.steps.py\", line 6, in step_impl",
+                "    raise NotImplementedError(u'STEP: Given I am not implemented')",
+                "NotImplementedError: STEP: Given I am not implemented"
+              ]
+            }
+          },
+          {
+            "keyword": "When",
+            "step_type": "when",
+            "name": "I fail",
+            "location": "setup_other.feature:25"
+          },
+          {
+            "keyword": "Then",
+            "step_type": "then",
+            "name": "I should generate a step code",
+            "location": "setup_other.feature:26"
+          }
+        ],
+        "status": "failed"
+      }
+    ]
+  }
+]
