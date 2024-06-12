@@ -45,14 +45,21 @@ def process_cucumberjs(data):
     results = {'passing': 0, 'failing': 0, 'pending': 0}
     for feature in data:
         for element in feature['elements']:
+            scenario_status = 'passing'  # Assume passing unless a step fails or is pending
             for step in element['steps']:
                 if 'result' in step:
-                    if step['result']['status'] == 'passed':
-                        results['passing'] += 1
-                    elif step['result']['status'] == 'failed':
-                        results['failing'] += 1
-                    elif step['result']['status'] == 'undefined':
-                        results['pending'] += 1
+                    step_status = step['result']['status']
+                    if step_status == 'failed':
+                        scenario_status = 'failing'
+                        break  # No need to check further, the scenario is failing
+                    elif step_status == 'undefined':
+                        scenario_status = 'pending'
+            if scenario_status == 'passing':
+                results['passing'] += 1
+            elif scenario_status == 'failing':
+                results['failing'] += 1
+            elif scenario_status == 'pending' and scenario_status != 'failing':
+                results['pending'] += 1
     return results
 
 
